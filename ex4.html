@@ -14,18 +14,21 @@
    <button id="btnAdd">Enter</button>
 
    <ul>
-      <li>Notebook<button> Delete</button></li>
-      <li>Jello<button> Delete</button></li>
-      <li>Spinach<button> Delete</button></li>
-      <li>Rice<button> Delete</button></li>
-      <li>Birthday Cake<button> Delete</button></li>
-      <li>Candles<button> Delete</button></li>
+      <!-- this.parentNode refers to the parent which is the li -->
+      <li>Notebook<button onclick="deleteItem(this.parentNode)"> Delete</button></li>
+      <li>Jello<button onclick="deleteItem(this.parentNode)"> Delete</button></li>
+      <li>Spinach<button onclick="deleteItem(this.parentNode)"> Delete</button></li>
+      <li>Rice<button onclick="deleteItem(this.parentNode)"> Delete</button></li>
+      <li>Birthday Cake<button onclick="deleteItem(this.parentNode)"> Delete</button></li>
+      <li>Candles<button onclick="deleteItem(this.parentNode)"> Delete</button></li>
    </ul>
 
    <script>
 
       // add code here
-
+      function deleteItem(elem) {
+         elem.remove();
+      }
    </script>
 
 </body>
