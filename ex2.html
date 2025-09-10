@@ -33,15 +33,15 @@
         var square=true;
         // add code here
         function changeShape() {
-            var shape = document.getElementById("div1");
+            let divElem = document.getElementById("div1");
             // square = false;
             // shape.innerText = div2;
             if (square) {
-                shape.style.borderRadius = "50%"; // turn into circle
+                divElem.style.borderRadius = "50%"; // change to circle
             } else {
-                shape.style.borderRadius = "0";   // back to square
+                divElem.style.borderRadius = "0";   // back to square
             }
-            square = !square; // flip between true/false
+            square = !square; // flip between true/false (toggle the square)
         }
         
     </script>
