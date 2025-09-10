@@ -37,11 +37,10 @@
                     errorMessages += "Age must be between 10 and 40.\n";
                 }
                 // or:  if (email.indexOf("@") === -1) {
-                if (email.includes("@")) {
+                if (!email.includes("@")) {
                     errorMessages += "Email must contain the character @.\n";
                 }
-                // if (password.trim().length == 0)
-                if (password.trim() === "") {
+                if (password.trim().length == 0) {
                     errorMessages += "Password must be non-empty.\n";
                 }
                 if (errorMessages !== "") {
