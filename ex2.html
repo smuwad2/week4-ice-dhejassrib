@@ -10,8 +10,13 @@
         }
 
         /* add CSS code here */
-
-        
+        /* #div2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 500px;
+            background-color: goldenrod;
+        }
+         */
     </style>
 
     
@@ -27,9 +32,16 @@
     <script>
         var square=true;
         // add code here
-        var shape = document.getAttributeby
         function changeShape() {
-            
+            var shape = document.getElementById("div1");
+            // square = false;
+            // shape.innerText = div2;
+            if (square) {
+                shape.style.borderRadius = "50%"; // turn into circle
+            } else {
+                shape.style.borderRadius = "0";   // back to square
+            }
+            square = !square; // flip between true/false
         }
         
     </script>
