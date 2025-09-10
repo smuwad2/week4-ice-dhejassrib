@@ -11,6 +11,7 @@
 
    <input type="text" id="inputText">
    <!-- add a button here for adding new item -->
+   <button id="btnAdd">Enter</button>
 
    <ul>
       <li>Notebook<!--<button>Delete</button></li>-->
@@ -23,7 +24,27 @@
 
    <script>
 
-      // add code here
+    // add code here
+    // const items = ["Notebook", "Jello", "Spinach", "Rice", "Birthday Cake", "Candles"];
+    // const ulELem = document.createElement("ul");
+    // for (item of items) {
+    //     const liElem = document.createElement("li");
+    //     liElem.innerText = item;
+    //     ulELem.appendChild(liElem);
+    // }
+    // divElem.appendChild(ulELem);
+
+    const ulELem = document.createElement("ul");
+    const btnElem = document.getElementById("btnAdd");
+    btnElem.addEventListener("click", addItem);
+    function addItem() {
+        const newItemVal = document.getElementById("newActivity").value;
+        const liElem = document.createElement("li");
+        liElem.innerText = newItemVal;
+        ulELem.appendChild(liElem);
+    }
+
+    
 
    </script>
 
