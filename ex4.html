@@ -29,6 +29,21 @@
       function deleteItem(elem) {
          elem.remove();
       }
+      function addItem() {
+        const newItemVal = document.getElementById("inputText").value;
+        const ulElem = document.getElementsByTagName("ul")[0];
+        const liElem = document.createElement("li");
+        liElem.innerText = newItemVal;
+        const delBtnElem = document.createElement("button");
+        delBtnElem.innerText = "delete";
+
+        // anonymous function works coz the click can work after the browser finishes loading?
+        delBtnElem.addEventListener("click", function(){
+            deleteItem(this.parentNode);
+        });
+        liElem.appendChild(delBtnElem);
+        ulElem.appendChild(liElem);
+      }
    </script>
 
 </body>
