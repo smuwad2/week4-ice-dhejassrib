@@ -33,9 +33,11 @@
         const newItemVal = document.getElementById("inputText").value;
         const ulElem = document.getElementsByTagName("ul")[0];
         const liElem = document.createElement("li");
-        liElem.innerText = newItemVal;
+        liElem.appendChild(document.createTextNode(newItemVal + " "));
+
+      //   liElem.innerText = newItemVal;
         const delBtnElem = document.createElement("button");
-        delBtnElem.innerText = "delete";
+        delBtnElem.innerText = "Delete";
 
         // anonymous function works coz the click can work after the browser finishes loading?
         delBtnElem.addEventListener("click", function(){
