@@ -40,7 +40,8 @@
                 if (email.includes("@")) {
                     errorMessages += "Email must contain the character @.\n";
                 }
-                if (password.trim().length == 0) {
+                // if (password.trim().length == 0)
+                if (password.trim() === "") {
                     errorMessages += "Password must be non-empty.\n";
                 }
                 if (errorMessages !== "") {
